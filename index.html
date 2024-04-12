@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>工作簽收單轉印</title>
+    <style>
+      h1{
+        text-align: center;
+        border-bottom:2px  solid black ;
+        width: 80%;
+        margin: 20px auto; /* 讓標題水平居中 */
+      }
+      #formContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .bigArear{
+        margin-bottom: 30px;
+      }
+
+      #arear1 {
+        width: 80%;
+        height: 200px;
+        display: flex;
+        flex-direction: row; /* 將內容項目橫向排列 */
+        
+      }
+      #arear2 {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+
+      #arear3 {
+        width: 100%;
+        display: flex; /* 使用 Flexbox */
+        flex-direction: column;
+        justify-content: center; /* 橫向至中排列 */
+        align-items: center;
+        
+      }
+      #arear3Ttlte{
+        display: flex;
+        width: 30%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      #arear4{
+        width: 90%;  
+      }
+
+  
+      input[type="text"] {
+        height: 30px;
+        width: 60%;
+        padding: 5px; /* 設置垂直和水平方向的內邊距 */
+        box-sizing: border-box; /* 讓內邊距和邊框不會影響到元素的實際寬度 */
+        word-wrap: break-word; /* 在單詞內斷行 */
+        overflow-wrap: break-word;
+      }
+  
+      .checkbox-group label {
+      display: inline-block; /* 讓標籤元素在同一行顯示 */
+      margin-right: 10px; /* 設置標籤元素間的右邊距 */
+      
+      }
+
+      .container1 {
+      width: 30%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      }
+
+     label{
+        font-size: 18px;
+      }
+
+      .container2 {
+      width: 30%;
+      margin: 0 auto;
+      
+      }
+
+      .container4{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap; /* 允許換行 */
+        align-items: center;
+        justify-content: space-around;
+     
+      }
+      .container4 label {
+        flex: 0 0 calc(33.33% - 20px); /* 一列的寬度為三分之一，並考慮間距 */
+        margin: 5px;
+        border: 1px solid black;
+        font-size: 18px;
+        border-radius: 10px;
+      }
+
+      .container4 label:hover {
+        background-color: lightgray;
+        cursor: pointer; /* 將鼠標形狀設置為手指 */
+      }
+  
+      .form-row {
+        margin-bottom: 10px; /* 設置表單字段之間的間距 */
+        height: auto; /* 將表單字段的高度設置為自動，以容納內容 */
+        display: flex; /* 使用 Flexbox 佈局 */
+        justify-content: center; /* 將內容水平置中 */
+        align-items: center; /* 將內容垂直置中 */
+      }
+
+      .form-row label{
+        width: 200px;
+        font-size: 18px;
+      }
+      #constructionDateInput{
+        width: 400px; /* 設置寬度 */
+      }
+
+      #constructionAddressInput{
+        resize: none;
+        width: 400px; /* 設置寬度 */
+        height: 60; /* 設置高度 */
+      }
+
+  .checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .reusableInput{
+    width: 50px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+
+  td input{
+    width: 200px;
+  }
+
+
+
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+    </style>
+  </head>
+  <body>
+    <h1>病媒防治工作簽收單</h1>
+
+  <div class="container">  
+    <form id="contact" action="" method="post">
+      <div id="formContainer">
+        <div id="arear1" class="bigArear">
+        <div class="container1">
+          <div class="form-row">
+            <label for="nameInput">客戶名稱:</label>
+            <input id="nameInput" type="text"  autofocus>
+          </div>
+          <div class="form-row">
+            <label for="billNameInput">發票抬頭：</label>
+            <input id="billNameInput" type="text"  autofocus>
+          </div>
+          <div class="form-row">
+            <label for="billNumberInput">統一編號:</label>
+            <input id="billNumberInput" type="text" autofocus>
+          </div>
+          <div class="form-row">
+            <label for="contactPhoneInput">電話:</label>
+            <input id="contactPhoneInput" type="text" >
+          </div>
+          <div class="form-row">
+            <label for="contactInput">聯絡人：</label>
+            <input id="contactInput" type="text" >
+          </div>
+        </div>
+
+        <div class="container2">
+          <div class="form-row">
+            <label for="onSiteContactInput">施作窗口:</label>
+            <input id="onSiteContactInput" type="text"  autofocus>
+          </div>
+           <div class="form-row">
+            <label for="onSiteContactPhoneInput">施作窗口電話:</label>
+            <input id="onSiteContactPhoneInput" type="text" >
+          </div>
+          <div id="DateInputRow" class="form-row">
+            <label for="constructionDateInput">施工日期/時間：</label>
+            <input id="constructionDateInput" type="datetime-local"  autofocus>
+          </div>
+          
+        <div class="form-row">
+          <label for="constructionAddressInput">施作地點:</label>
+          <textarea id="constructionAddressInput" rows="4" cols="20" autofocus></textarea>
+        </div>
+        
+        </div>
+       </div>  
+       <div  id="arear2" class="bigArear">
+          <div class="container3">
+            <label for="onSiteContactInput">施工頻率:</label>
+            <select id="selectOption" name="selectOption">
+              <option value="oneTime">一次性</option>
+              <option value="reusable">定期保養</option>
+            </select>
+            <label>每月/ <input class="reusableInput" id="reusableMonth" type="text" style="width: 30px; height: 20px;" disabled> 次，</label>
+            <label>每季/ <input class="reusableInput" id="reusableSeason" type="text" style="width: 30px; height: 20px;" disabled> 次，</label>
+            <label>每半年/ <input class="reusableInput" id="reusableHalfYear" type="text" style="width: 30px; height: 20px;" disabled> 次</label>
+        </div>
+       </div>
+
+       <div id="arear3" class="bigArear">
+        <div id="arear3Ttlte">防治項目</div>
+        <div class="container4"> 
+          <label><input type="checkbox" id="pestControlCheckbox" name="pestControlCheckbox"> 一般害蟲防治 - Pest Control</label>
+          <label><input type="checkbox" id="termiteControlCheckbox" name="termiteControlCheckbox"> 白蟻防治 - Termite Control</label>
+          <label><input type="checkbox" id="rodentControlCheckbox" name="rodentControlCheckbox"> 鼠害防治 - Rodent Control</label>
+          <label><input type="checkbox" id="fleasControlCheckbox" name="fleasControlCheckbox"> 跳蚤防治 - Fleas Control</label>
+          <label><input type="checkbox" id="powderPostBeetleCheckbox" name="powderPostBeetleCheckbox"> 粉狀蛀蟲防治 - Powder Post Beetle</label>
+          <label><input type="checkbox" id="othersCheckbox" name="othersCheckbox"> 其他 - Others</label>
+      </div>
+     </div>
+
+     <div id="arear4" class="bigArear"> 
+      <div class="container5">
+        <table>
+          <thead>
+            <tr>
+              <th>施用藥劑及主要成份</th>
+              <th>稀釋比例</th>
+              <th>劑型</th>
+              <th>許可證字號</th>
+              <th>使用區域</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input class="tdContent" type="text" name="content1_1"></td>
+              <td><input class="tdContent" type="text" name="content1_2"></td>
+              <td><input class="tdContent" type="text" name="content1_3"></td>
+              <td><input class="tdContent" type="text" name="content1_4"></td>
+              <td><input class="tdContent" type="text" name="content1_5"></td>
+            </tr>
+            <tr>
+              <td><input class="tdContent" type="text" name="content2_1"></td>
+              <td><input class="tdContent" type="text" name="content2_2"></td>
+              <td><input class="tdContent" type="text" name="content2_3"></td>
+              <td><input class="tdContent" type="text" name="content2_4"></td>
+              <td><input class="tdContent" type="text" name="content2_5"></td>
+            </tr>
+            <tr>
+              <td><input class="tdContent" type="text" name="content3_1"></td>
+              <td><input class="tdContent" type="text" name="content3_2"></td>
+              <td><input class="tdContent" type="text" name="content3_3"></td>
+              <td><input class="tdContent" type="text" name="content3_4"></td>
+              <td><input class="tdContent" type="text" name="content3_5"></td>
+            </tr>
+            <tr>
+              <td><input class="tdContent" type="text" name="content4_1"></td>
+              <td><input class="tdContent" type="text" name="content4_2"></td>
+              <td><input class="tdContent" type="text" name="content4_3"></td>
+              <td><input class="tdContent" type="text" name="content4_4"></td>
+              <td><input class="tdContent" type="text" name="content4_5"></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+     </div>
+
+     <div id="arear5" class="bigArear">
+      <div id="arear5Ttlte">一般蟲害防治</div>
+      <div class="container6"> 
+        <label><input type="checkbox" id="pestControlCheckbox" name="pestControlCheckbox"> 一般害蟲防治 - Pest Control</label>
+        <label><input type="checkbox" id="termiteControlCheckbox" name="termiteControlCheckbox"> 白蟻防治 - Termite Control</label>
+        <label><input type="checkbox" id="rodentControlCheckbox" name="rodentControlCheckbox"> 鼠害防治 - Rodent Control</label>
+        <label><input type="checkbox" id="fleasControlCheckbox" name="fleasControlCheckbox"> 跳蚤防治 - Fleas Control</label>
+        <label><input type="checkbox" id="powderPostBeetleCheckbox" name="powderPostBeetleCheckbox"> 粉狀蛀蟲防治 - Powder Post Beetle</label>
+        <label><input type="checkbox" id="othersCheckbox" name="othersCheckbox"> 其他 - Others</label>
+        <label><input type="checkbox" id="othersCheckbox" name="othersCheckbox"> 其他 - Others</label>
+        <label><input type="checkbox" id="othersCheckbox" name="othersCheckbox"> 其他 - Others</label>
+    </div>
+   </div>
+
+
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">輸出</button>
+      </div>
+    </form>
+  </div>
+    <script>
+    // 獲取表單元素
+    const form = document.getElementById('contact');
+      // const { ipcRenderer } = require('electron');
+
+
+    // 監聽表單的提交事件
+    form.addEventListener('submit', function(event) {
+      // 阻止表單預設提交行為
+      event.preventDefault();
+
+      // 獲取表單輸入的值
+      const name = document.getElementById('nameInput').value;
+      const billName = document.getElementById('billNameInput').value;
+      const billNumber = document.getElementById('billNumberInput').value;
+      const contactPhone = document.getElementById('contactPhoneInput').value;
+      const contact = document.getElementById('contactInput').value;
+      const onSiteContact = document.getElementById('onSiteContactInput').value;
+      const onSiteContactPhone = document.getElementById('onSiteContactPhoneInput').value;
+      const constructionDate = document.getElementById('constructionDateInput').value;
+      const constructionAddress = document.getElementById('constructionAddressInput').value;
+      
+      const selectOption = document.getElementById('selectOption').value;
+      if (selectOption === "reusable") {
+        reusableMonth = document.getElementById('reusableMonth').value;
+        reusableSeason = document.getElementById('reusableSeason').value;
+        reusableHalfYear = document.getElementById('reusableHalfYear').value;
+      } else {
+        reusableMonth = "";
+        reusableSeason = "";
+        reusableHalfYear = "";
+      }
+
+      const pestControlCheckbox = document.getElementById('pestControlCheckbox').checked;
+      const termiteControlCheckbox = document.getElementById('termiteControlCheckbox').checked;
+      const rodentControlCheckbox = document.getElementById('rodentControlCheckbox').checked;
+      const fleasControlCheckbox = document.getElementById('fleasControlCheckbox').checked;
+      const powderPostBeetleCheckbox = document.getElementById('powderPostBeetleCheckbox').checked;
+      const othersCheckbox = document.getElementById('othersCheckbox').checked;
+
+    // 創建一個空物件來存儲表單內容
+    const allTdContent = {};
+
+    // 遍歷所有帶有 'tdContent' class 的 td 元素
+    const tdContents = document.querySelectorAll('.tdContent');
+    tdContents.forEach(tdContent => {
+      // 將 td 元素的內容存入 allTdContent 物件中
+      allTdContent[tdContent.name] = tdContent.value;
+    });
+
+
+      const formData = {
+        name: name, 
+        billName: billName, 
+        billNumber: billNumber, 
+        contactPhone: contactPhone, 
+        contact :contact,
+        onSiteContact :onSiteContact,
+        onSiteContactPhone :onSiteContactPhone,
+        constructionDate :constructionDate,
+        constructionAddress:constructionAddress, 
+        selectOption:selectOption,
+        reusableMonth :reusableMonth,
+        reusableSeason :reusableSeason, 
+        reusableHalfYear: reusableHalfYear,
+        pestControlCheckbox:pestControlCheckbox,
+        termiteControlCheckbox:termiteControlCheckbox,
+        rodentControlCheckbox:rodentControlCheckbox,
+        fleasControlCheckbox:fleasControlCheckbox,
+        powderPostBeetleCheckbox:powderPostBeetleCheckbox,
+        othersCheckbox:othersCheckbox,
+        drugRecords:allTdContent
+      }
+
+      // ipcRenderer.send('frontend-message', formData); //內容 arg
+      console.log(formData);
+       // 顯示警示對話框，並檢查用戶是否點擊了 "確定"
+      const confirmed = confirm("確定要送出嗎？");
+      
+      // 如果用戶點擊了 "確定"
+      if (confirmed) {
+        // 重新加載頁面
+        window.location.reload();
+      }
+    });
+
+
+
+      // const sendBtn = document.getElementById('sendBtn');
+      // sendBtn.addEventListener('click', () => {
+      //   ipcRenderer.send('frontend-message', 'Hello from frontend!'); //Hello from frontend!是內容 arg
+      // });
+
+      // ipcRenderer.on('backend-reply', (event, arg) => {
+      //   console.log(`Received reply from backend: ${arg}`);
+      // });
+    </script>
+  <script>
+    // 監聽選擇框的變化事件
+    document.getElementById('selectOption').addEventListener('change', function() {
+      // 獲取選擇的值
+      var selectedValue = this.value;
+      
+      // 根據選擇的值啟用或禁用相應的輸入欄
+      if (selectedValue === 'reusable') {
+        document.getElementById('reusableMonth').disabled = false;
+        document.getElementById('reusableSeason').disabled = false;
+        document.getElementById('reusableHalfYear').disabled = false;
+      } else {
+        document.getElementById('reusableMonth').disabled = true;
+        document.getElementById('reusableSeason').disabled = true;
+        document.getElementById('reusableHalfYear').disabled = true;
+      }
+    });
+  </script>
+  </body>
+</html>
