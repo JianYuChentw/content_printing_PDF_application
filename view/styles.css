@@ -1,0 +1,259 @@
+h1{
+  text-align: center;
+  border-bottom:2px  solid black ;
+  width: 80%;
+  margin: 20px auto; /* 讓標題水平居中 */
+}
+#formContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bigArear{
+  margin-bottom: 30px;
+}
+
+#arear1 {
+  width: 90%;
+  display: flex;
+  flex-direction: row; /* 將內容項目橫向排列 */
+  
+}
+#arear2 {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#arear3 {
+  width: 100%;
+  display: flex; /* 使用 Flexbox */
+  flex-direction: column;
+  justify-content: center; /* 橫向至中排列 */
+  align-items: center;
+  
+}
+#arear3Ttlte{
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+#arear4{
+  width: 90%;  
+}
+
+#arear5 {
+  width: 90%;
+  display: flex;
+  flex-direction: row; /* 將內容項目橫向排列 */
+  justify-content: space-around;
+  
+}
+#arear5Ttlte1 {
+  font-size: 18px;
+    display: block;
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+#arear5Ttlte2 {
+  font-size: 18px;
+    display: block;
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+
+
+#arear6 {
+  width: 70%;
+  display: flex;
+  flex-direction: column; /* 將內容項目橫向排列 */
+  justify-content: space-around;
+}
+
+#arear6 div {
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  height: 30px;
+  width: 90%;
+  padding: 5px; /* 設置垂直和水平方向的內邊距 */
+  box-sizing: border-box; /* 讓內邊距和邊框不會影響到元素的實際寬度 */
+  word-wrap: break-word; /* 在單詞內斷行 */
+  overflow-wrap: break-word;
+}
+
+.checkbox-group label {
+display: inline-block; /* 讓標籤元素在同一行顯示 */
+margin-right: 10px; /* 設置標籤元素間的右邊距 */
+
+}
+
+.container1 {
+width: 40%;
+margin: 0 auto;
+margin-bottom: 30px;
+}
+
+label{
+  font-size: 18px;
+}
+
+.container2 {
+width: 50%;
+margin: 0 auto;
+
+}
+
+.container4{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap; /* 允許換行 */
+  align-items: center;
+  justify-content: space-around;
+
+}
+.container4 label {
+  flex: 0 0 calc(30% - 10px); /* 一列的寬度為三分之一，並考慮間距 */
+  margin: 5px;
+  border: 1px solid black;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.container4 label:hover {
+  background-color: lightgray;
+  cursor: pointer; /* 將鼠標形狀設置為手指 */
+}
+
+ .container6{
+  width:30%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+} 
+
+.container6 label {
+  font-size: 18px;
+ }
+ .container6 label:hover {
+  background-color: lightgray;
+  cursor: pointer; /* 將鼠標形狀設置為手指 */
+}
+
+
+ .container7 {
+  width:30%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.container7 label {
+  font-size: 18px;
+ }
+
+ .container7 label:hover {
+  background-color: lightgray;
+  cursor: pointer; /* 將鼠標形狀設置為手指 */
+}
+
+
+
+
+.form-row {
+  margin-bottom: 10px; /* 設置表單字段之間的間距 */
+  height: auto; /* 將表單字段的高度設置為自動，以容納內容 */
+  display: flex; /* 使用 Flexbox 佈局 */
+  justify-content: start; /* 將內容水平置中 */
+  align-items: center; /* 將內容垂直置中 */
+}
+
+.form-row label{
+  width: 200px;
+  font-size: 18px;
+}
+#constructionDateInput{
+  width: 400px; /* 設置寬度 */
+}
+#todolistInput{
+  width: 400px;
+}
+
+#constructionAddressInput{
+  resize: none;
+  width: 400px; /* 設置寬度 */
+  height: 60; /* 設置高度 */
+}
+
+
+
+
+#worksReportInput{
+  resize: none;
+  width: 400px; /* 設置寬度 */
+  height: 60; /* 設置高度 */
+}
+
+#techniciantInput,
+#pesticideApplicatortInput {
+  width: 150px; /* 調整寬度，你可以根據需要修改 */
+
+}
+
+
+.checkbox-group label {
+display: inline-block;
+margin-right: 10px;
+}
+
+.reusableInput{
+width: 50px;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+th, td {
+border: 1px solid black;
+padding: 8px;
+text-align: center;
+}
+th {
+background-color: #f2f2f2;
+}
+
+td input{
+width: 200px;
+}
+
+
+
+
+button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #45a049;
+}

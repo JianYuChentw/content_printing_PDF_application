@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>工作簽收單轉印</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>病媒防治工作簽收單</h1>
+
+  <div class="container">  
+    <form id="contact" action="" method="post">
+      <div id="formContainer">
+        <div id="arear1" class="bigArear">
+        <div class="container1">
+          <div class="form-row">
+            <label for="nameInput">客戶名稱:</label>
+            <input id="nameInput" type="text"  autofocus>
+          </div>
+          <div class="form-row">
+            <label for="billNameInput">發票抬頭：</label>
+            <input id="billNameInput" type="text"  autofocus>
+          </div>
+          <div class="form-row">
+            <label for="billNumberInput">統一編號:</label>
+            <input id="billNumberInput" type="text" autofocus>
+          </div>
+          <div class="form-row">
+            <label for="contactPhoneInput">電話:</label>
+            <input id="contactPhoneInput" type="text" >
+          </div>
+          <div class="form-row">
+            <label for="contactInput">聯絡人：</label>
+            <input id="contactInput" type="text" >
+          </div>
+        </div>
+
+        <div class="container2">
+          <div class="form-row">
+            <label for="onSiteContactInput">施作窗口:</label>
+            <input id="onSiteContactInput" type="text"  autofocus>
+          </div>
+           <div class="form-row">
+            <label for="onSiteContactPhoneInput">施作窗口電話:</label>
+            <input id="onSiteContactPhoneInput" type="text" >
+          </div>
+          <div id="DateInputRow" class="form-row">
+            <label for="constructionDateInput">施工日期/時間：</label>
+            <input id="constructionDateInput" type="datetime-local"  autofocus>
+          </div>
+          
+        <div class="form-row">
+          <label for="constructionAddressInput">施作地點:</label>
+          <textarea id="constructionAddressInput" rows="4" cols="20" autofocus></textarea>
+        </div>
+        
+        </div>
+       </div>  
+       <div  id="arear2" class="bigArear">
+          <div class="container3">
+            <label for="onSiteContactInput">施工頻率:</label>
+            <select id="selectOption" name="selectOption">
+              <option value="oneTime">一次性</option>
+              <option value="reusable">定期保養</option>
+            </select>
+            <label>每月/ <input class="reusableInput" id="reusableMonth" type="text" style="width: 30px; height: 20px;" disabled> 次，</label>
+            <label>每季/ <input class="reusableInput" id="reusableSeason" type="text" style="width: 30px; height: 20px;" disabled> 次，</label>
+            <label>每半年/ <input class="reusableInput" id="reusableHalfYear" type="text" style="width: 30px; height: 20px;" disabled> 次</label>
+        </div>
+       </div>
+
+       <div id="arear3" class="bigArear">
+        <div id="arear3Ttlte">防治項目</div>
+        <div class="container4"> 
+          <label><input type="checkbox" id="pestControlCheckbox" name="pestControlCheckbox"> 一般害蟲防治 - Pest Control</label>
+          <label><input type="checkbox" id="termiteControlCheckbox" name="termiteControlCheckbox"> 白蟻防治 - Termite Control</label>
+          <label><input type="checkbox" id="rodentControlCheckbox" name="rodentControlCheckbox"> 鼠害防治 - Rodent Control</label>
+          <label><input type="checkbox" id="fleasControlCheckbox" name="fleasControlCheckbox"> 跳蚤防治 - Fleas Control</label>
+          <label><input type="checkbox" id="powderPostBeetleCheckbox" name="powderPostBeetleCheckbox"> 粉狀蛀蟲防治 - Powder Post Beetle</label>
+          <label><input type="checkbox" id="othersCheckbox" name="othersCheckbox"> 其他 - Others</label>
+      </div>
+     </div>
+
+     <div id="arear4" class="bigArear"> 
+      <div class="container5">
+        <table>
+          <thead>
+            <tr>
+              <th>施用藥劑及主要成份</th>
+              <th>稀釋比例</th>
+              <th>劑型</th>
+              <th>許可證字號</th>
+              <th>使用區域</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input class="tdContent" type="text" name="content1_1"></td>
+              <td><input class="tdContent" type="text" name="content1_2"></td>
+              <td><input class="tdContent" type="text" name="content1_3"></td>
+              <td><input class="tdContent" type="text" name="content1_4"></td>
+              <td><input class="tdContent" type="text" name="content1_5"></td>
+            </tr>
+            <tr>
+              <td><input class="tdContent" type="text" name="content2_1"></td>
+              <td><input class="tdContent" type="text" name="content2_2"></td>
+              <td><input class="tdContent" type="text" name="content2_3"></td>
+              <td><input class="tdContent" type="text" name="content2_4"></td>
+              <td><input class="tdContent" type="text" name="content2_5"></td>
+            </tr>
+            <tr>
+              <td><input class="tdContent" type="text" name="content3_1"></td>
+              <td><input class="tdContent" type="text" name="content3_2"></td>
+              <td><input class="tdContent" type="text" name="content3_3"></td>
+              <td><input class="tdContent" type="text" name="content3_4"></td>
+              <td><input class="tdContent" type="text" name="content3_5"></td>
+            </tr>
+            <tr>
+              <td><input class="tdContent" type="text" name="content4_1"></td>
+              <td><input class="tdContent" type="text" name="content4_2"></td>
+              <td><input class="tdContent" type="text" name="content4_3"></td>
+              <td><input class="tdContent" type="text" name="content4_4"></td>
+              <td><input class="tdContent" type="text" name="content4_5"></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+     </div>
+
+     <div id="arear5" class="bigArear">
+      <div id="arear5Ttlte1">一般蟲害防治</div>
+      <div class="container6"> 
+        <label><input type="checkbox" id="portableSprayerCheckbox" name="portableSprayerCheckbox"> 手提式噴灑器</label>
+        <label><input type="checkbox" id="electricSprayerCheckbox" name="electricSprayerCheckbox">電動式噴灑器</label>
+        <label><input type="checkbox" id="mediumElectricSprayerCheckbox" name="mediumElectricSprayerCheckbox">中型電動式噴灑器</label>
+        <label><input type="checkbox" id="largePneumaticSprayerCheckbox" name="largePneumaticSprayerCheckbox">大型氣動式噴灑器</label>
+        <label><input type="checkbox" id="powerSprayerCheckbox" name="powerSprayerCheckbox">動力式噴灑機</label>
+        <label><input type="checkbox" id="ultrafineSpaceMistMachineCheckbox" name="ultrafineSpaceMistMachineCheckbox">微粒子空間冷霧機</label>
+        <label><input type="checkbox" id="thermalFoggerCheckbox" name="thermalFoggerCheckbox">熱霧機</label>
+        <label><input type="checkbox" id="cockroachBaitGelCheckbox" name="cockroachBaitGelCheckbox">蟑螂餌膠</label>
+        <label><input type="checkbox" id="creviceTreatmentMachineCheckbox" name="creviceTreatmentMachineCheckbox">縫隙處理機</label>
+        <label><input type="checkbox" id="replaceFlyPaperCheckbox" name="replaceFlyPaperCheckbox">更換捕蟲紙</label>
+    </div>
+    <div id="arear5Ttlte2">鼠疫防治工程</div>
+    <div class="container7"> 
+      <label><input type="checkbox" id="viewRodentEntryPointsCheckbox" name="portableSprayerCheckbox"> 檢視老鼠入侵點</label>
+      <label><input type="checkbox" id="viewRodentTracesCheckbox" name="electricSprayerCheckbox">檢視鼠跡狀況</label>
+      <label><input type="checkbox" id="refillOrReplaceBaitCheckbox" name="mediumElectricSprayerCheckbox">補充或更換餌劑</label>
+      <label><input type="checkbox" id="refillReplaceOrAddTrapsCheckbox" name="largePneumaticSprayerCheckbox">補充、更換或新增鼠板</label>
+      <label><input type="checkbox" id="rodentProofingCheckbox" name="powerSprayerCheckbox">鼠洞封阻工程</label>
+      <label><input type="checkbox" id="designRodentMovementPathsCheckbox" name="ultrafineSpaceMistMachineCheckbox">設計老鼠活動路徑</label>
+      <label><input type="checkbox" id="applyRepellentCheckbox" name="thermalFoggerCheckbox">施用忌避劑</label>
+      <label><input type="checkbox" id="captureRodentsCheckbox" name="cockroachBaitGelCheckbox">捕獲老鼠</label>
+      <label><input type="checkbox" id="deodorizeAndDisinfectCheckbox" name="creviceTreatmentMachineCheckbox">除臭、除菌處理</label>
+      <label><input type="checkbox" id="installVibrationOrUltrasonicDeviceCheckbox" name="replaceFlyPaperCheckbox">架設震動或超音波器</label>
+  </div>
+   </div>
+
+      <div  id="arear6" class="bigArear">
+        <div class="container8">
+          <div class="form-row">
+            <label for="todolistInput">交辦事項:</label>
+            <input id="todolistInput" type="text"  autofocus>
+          </div>
+          <div class="form-row">
+            <label for="worksReportInput">工作報告:</label>
+            <textarea id="worksReportInput" rows="10" cols="30" autofocus></textarea>
+          </div>
+          <div class="form-row">
+            <label for="techniciantInput">技術員:</label>
+            <input id="techniciantInput" type="text"  autofocus>
+          </div>
+          <div class="form-row">
+            <label for="pesticideApplicatortInput">施藥人員:</label>
+            <input id="pesticideApplicatortInput" type="text"  autofocus>
+          </div>
+      </div>
+    </div>
+
+
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">輸出</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="formSubmit.js"></script>
+  <script src="eventForm.js"></script>
+
+  </body>
+</html>
