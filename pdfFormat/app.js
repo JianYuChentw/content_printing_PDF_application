@@ -21,7 +21,6 @@ function insertNewlines(str, n) {
   return result;
 }
 
-
 function splitDateTime(dateTimeString) {
   // 將日期和時間字串以 'T' 符號分割成日期部分和時間部分
   const [datePart, timePart] = dateTimeString.split('T');
@@ -49,7 +48,6 @@ function returnValue(value) {
       return ' ';
   }
 }
-
 
 async function createPDFDocument(formData,savePath) {
 // 建立或尋找目標資料夾

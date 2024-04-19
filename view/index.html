@@ -141,7 +141,10 @@
         <label><input type="checkbox" id="thermalFoggerCheckbox" name="thermalFoggerCheckbox">熱霧機</label>
         <label><input type="checkbox" id="cockroachBaitGelCheckbox" name="cockroachBaitGelCheckbox">蟑螂餌膠</label>
         <label><input type="checkbox" id="creviceTreatmentMachineCheckbox" name="creviceTreatmentMachineCheckbox">縫隙處理機</label>
-        <label><input type="checkbox" id="replaceFlyPaperCheckbox" name="replaceFlyPaperCheckbox">更換捕蟲紙</label>
+        <label>
+            <input type="checkbox" id="captureInsectsCheckbox" name="captureInsectsCheckbox"> 更換捕蟲紙
+            <input type="number" id="insectsQuantity" style="width: 50px" name="insectsQuantity" min="1" disabled>張
+        </label>
     </div>
     <div id="arear5Ttlte2">鼠疫防治工程</div>
     <div class="container7"> 
@@ -152,7 +155,10 @@
       <label><input type="checkbox" id="rodentProofingCheckbox" name="powerSprayerCheckbox">鼠洞封阻工程</label>
       <label><input type="checkbox" id="designRodentMovementPathsCheckbox" name="ultrafineSpaceMistMachineCheckbox">設計老鼠活動路徑</label>
       <label><input type="checkbox" id="applyRepellentCheckbox" name="thermalFoggerCheckbox">施用忌避劑</label>
-      <label><input type="checkbox" id="captureRodentsCheckbox" name="cockroachBaitGelCheckbox">捕獲老鼠</label>
+      <label>
+        <input type="checkbox" id="captureRodentsCheckbox" name="captureRodentsCheckbox"> 捕獲老鼠：
+        <input type="number" id="rodentsQuantity" style="width: 50px" name="rodentsQuantity" min="1" disabled>隻
+      </label>
       <label><input type="checkbox" id="deodorizeAndDisinfectCheckbox" name="creviceTreatmentMachineCheckbox">除臭、除菌處理</label>
       <label><input type="checkbox" id="installVibrationOrUltrasonicDeviceCheckbox" name="replaceFlyPaperCheckbox">架設震動或超音波器</label>
   </div>

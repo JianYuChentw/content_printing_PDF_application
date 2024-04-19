@@ -15,3 +15,18 @@ document.getElementById('selectOption').addEventListener('change', function() {
     document.getElementById('reusableHalfYear').disabled = true;
   }
 });
+
+// 複選匡鎖
+const captureRodentsCheckbox = document.getElementById('captureRodentsCheckbox');
+const rodentsQuantityInput = document.getElementById('rodentsQuantity');
+const captureInsectsCheckbox = document.getElementById('captureInsectsCheckbox');
+const insectsQuantityInput = document.getElementById('insectsQuantity');
+
+captureRodentsCheckbox.addEventListener('change', function () {
+  rodentsQuantityInput.disabled = !this.checked;
+});
+
+captureInsectsCheckbox.addEventListener('change', function () {
+  insectsQuantityInput.disabled = !this.checked;
+});
+
