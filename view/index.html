@@ -11,6 +11,8 @@
   <div class="container">  
     <form id="contact" action="" method="post">
       <div id="formContainer">
+
+        
         <div id="arear1" class="bigArear">
         <div class="container1">
           <div class="form-row">
@@ -82,6 +84,19 @@
      </div>
 
      <div id="arear4" class="bigArear"> 
+      <div class="arear4Button">
+        <a>常用組合:</a><select id="namesDropdown">
+          <!-- 這裡會動態加載選項 -->
+        </select>
+        <button id="saveButton">存檔</button>
+        <button id="removeButton">刪除</button>
+        <div id="newCombinationArea">
+          <label for="newCombination">組合名稱:</label>
+          <input id="newCombination" type="text"  autofocus>
+          <button id="addButton">新增組合</button>
+        </div>
+          
+      </div>
       <div class="container5">
         <table>
           <thead>
@@ -185,14 +200,13 @@
       </div>
     </div>
 
-
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">輸出</button>
+      <button id ="subnt" name="submit" type="submit" id="contact-submit" data-submit="...Sending">輸出</button>
       </div>
     </form>
   </div>
 
   <script src="formSubmit.js"></script>
   <script src="eventForm.js"></script>
-
+  <script src="eventData.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 // 獲取表單元素
 const form = document.getElementById('contact');
+
 const { ipcRenderer } = require('electron');
 
 form.addEventListener('keydown', function(event) {
@@ -193,4 +194,7 @@ form.addEventListener('submit', function (event) {
     window.location.reload();
   }
 });
+
+
+
 

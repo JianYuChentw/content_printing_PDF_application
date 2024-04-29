@@ -1,7 +1,11 @@
 const UsingMedicines = require('../service/usingMedicines');
 const JsonFileHandler = require('../service/jsonFileHandler');
-const dataFile = 'save/usingMedicines.json';
-const fileHandler = new JsonFileHandler(dataFile);
+const path = require('path');
+const dataFileName = 'usingMedicines.json'; //檔案名稱
+const dataFilePath = path.resolve(__dirname, '..', 'save', dataFileName);
+const fileHandler = new JsonFileHandler(dataFilePath);
+
+
 
 
 /**
@@ -14,7 +18,13 @@ async function createData(newData) {
         const readJson = await fileHandler.read();
         const usingMedicines = new UsingMedicines(readJson);
         const nowData = await usingMedicines.addData(newData);
-        await fileHandler.write(nowData);
+        if(!nowData.status){
+            return false
+        }else{
+            await fileHandler.write(nowData.nowData);
+            return true
+        }
+        
     } catch (error) {
         console.error('新增項目發生錯誤', error);
     }
@@ -58,25 +68,29 @@ async function readDataByName(name) {
  * @param { string } name
  * @param { object } newData
  */
-async function updateDataByName(name, newData) {
+async function updateDataByName(name, upData) {
     try {
         const readJson = await fileHandler.read();
         const usingMedicines = new UsingMedicines(readJson); 
-        const [data] = await usingMedicines.updateDataByName(name, newData);
-        await fileHandler.write(data);
+        const newData = await updateDataByNameAndOldData(name, upData, usingMedicines.data)
+        await fileHandler.write(newData);
     } catch (error) {
         console.error('更新指定名稱項目發生錯誤', error);
     }
 }
 
 
-
+/**
+ * 移除指定項目
+ * @param {string} name 
+ */
 async function removeDataByName(name) { 
     try {
         const readJson = await fileHandler.read();
         const usingMedicines = new UsingMedicines(readJson); 
-        const [data] = await usingMedicines.removeDataByName(name);
-        await fileHandler.write(data);
+        const upData = await usingMedicines.removeDataByName(name);
+        const newData = await updateDataByNameAndOldData(name, upData, usingMedicines.data)
+        await fileHandler.write(newData);
         
     } catch (error) {
         console.error('移除指定名稱項目發生錯誤', error);
@@ -84,76 +98,30 @@ async function removeDataByName(name) {
 }
 
 
-
-
-const testD =  [
-    {
-        "dataName": "test1",
-        "content1": {
-            "content1_1": "不會吧",
-            "content1_2": "",
-            "content1_3": "",
-            "content1_4": "",
-            "content1_5": ""
-        },
-        "content2": {
-            "content2_1": "-",
-            "content2_2": "",
-            "content2_3": "",
-            "content2_4": "",
-            "content2_5": ""
-        },
-        "content3": {
-            "content3_1": "-",
-            "content3_2": "",
-            "content3_3": "",
-            "content3_4": "",
-            "content3_5": ""
-        },
-        "content4": {
-            "content4_1": "-",
-            "content4_2": "",
-            "content4_3": "",
-            "content4_4": "",
-            "content4_5": ""
+function updateDataByNameAndOldData(name, newData, oldData) {
+    const newDataArray = oldData.map(item => {
+        if (item.dataName === name) {
+            return { 
+                ...item,
+                content1: { ...newData.content1 }, // 更新 content1
+                content2: { ...newData.content2 }, // 更新 content2
+                content3: { ...newData.content3 }, // 更新 content3
+                content4: { ...newData.content4 }, // 更新 content4
+            };
+        } else {
+            return item;
         }
-    },
-    {
-        "dataName": "test2",
-        "content1": {
-            "content1_1": "-",
-            "content1_2": "123",
-            "content1_3": "1231",
-            "content1_4": "",
-            "content1_5": ""
-        },
-        "content2": {
-            "content2_1": "-",
-            "content2_2": "",
-            "content2_3": "",
-            "content2_4": "",
-            "content2_5": ""
-        },
-        "content3": {
-            "content3_1": "123123-",
-            "content3_2": "",
-            "content3_3": "",
-            "content3_4": "123123",
-            "content3_5": ""
-        },
-        "content4": {
-            "content4_1": "123123-",
-            "content4_2": "",
-            "content4_3": "",
-            "content4_4": "",
-            "content4_5": "123123"
-        }
-    }
-]
-
-
-removeDataByName('test1')
+    });
+    return newDataArray;
+}
 
 
 
-
+module.exports = {
+    createData,
+    readAllName,
+    readDataByName,
+    updateDataByName,
+    removeDataByName,
+    updateDataByNameAndOldData
+}

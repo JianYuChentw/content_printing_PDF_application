@@ -1,5 +1,5 @@
-// const {
-//     ipcRenderer
-//   } = require("electron");
-  
-//   window.ipcRenderer = ipcRenderer;
+// const { contextBridge, ipcRenderer } = require('electron');
+
+// contextBridge.exposeInMainWorld('api', {
+//     fetchNames: () => ipcRenderer.invoke('read-all-names')
+// });

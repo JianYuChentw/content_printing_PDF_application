@@ -15,6 +15,14 @@ h1{
   margin-bottom: 30px;
 }
 
+.arear1Button{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+width: 200px;
+margin: 0 10px 30px 10px;
+}
+
 #arear1 {
   width: 90%;
   display: flex;
@@ -44,8 +52,30 @@ h1{
   font-size: 20px;
 }
 
+.arear4Button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 10px 30px 10px;
+  align-items: center;
+  }
+
+  .arear4Button select{
+    width: 200px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
 #arear4{
   width: 90%;  
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#newCombination{
+width: 150px;
 }
 
 #arear5 {
@@ -133,6 +163,7 @@ margin: 0 auto;
   background-color: lightgray;
   cursor: pointer; /* 將鼠標形狀設置為手指 */
 }
+
 
  .container6{
   width:30%;

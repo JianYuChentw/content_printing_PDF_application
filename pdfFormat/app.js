@@ -69,6 +69,7 @@ if (!fs.existsSync(outputPath)) {
   const writeStream = fs.createWriteStream(outputFile);
   doc.pipe(writeStream);
   const fontPath = path.join(__dirname,'/fonts/TW-Kai-98_1.ttf')
+  console.log(fontPath);
   doc.font(fontPath)
 
   const margins = {

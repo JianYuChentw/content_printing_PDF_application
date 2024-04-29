@@ -1,3 +1,4 @@
+
 class UsingMedicines {
   constructor(data) {
     this.data = data;
@@ -8,10 +9,10 @@ class UsingMedicines {
     const isDuplicate = this.data.some(item => item.dataName === newData.dataName);
     if (isDuplicate) {
         console.error(`新增資料的 dataName "${newData.dataName}" 已存在，請使用其他 dataName。`);
-        return this.data; // 不執行新增動作，直接返回原始資料
+        return {nowData:this.data,status:false}; // 不執行新增動作，直接返回原始資料
     } else {
         this.data.push(newData); // 若 dataName 不重複，則新增資料
-        return this.data;
+        return {nowData:this.data,status:true};
     }
 }
 
