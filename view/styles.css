@@ -16,12 +16,23 @@ h1{
 }
 
 .arear1Button{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-width: 200px;
-margin: 0 10px 30px 10px;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 10px 30px 10px;
+  align-items: center;
+  }
+
+  .arear1Button select{
+    width: 150px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  #newClien{
+    width: 150px;
+    }
 
 #arear1 {
   width: 90%;

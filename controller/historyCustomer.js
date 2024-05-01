@@ -1,5 +1,4 @@
-const usingMedicines = require('../service/usingMedicines');
-
+const customerManager= require('../service/historyCustomer')
 
 /**
  * 新增項目
@@ -8,7 +7,7 @@ const usingMedicines = require('../service/usingMedicines');
  */
 async function createData(newData) {
     try {
-        const nowData = await usingMedicines.addData(newData);
+        const nowData = await customerManager.addData(newData);
         if(!nowData){
             return false
         }else{
@@ -20,24 +19,23 @@ async function createData(newData) {
     }
 }
 
-
 /**
  * 讀取所有項目名稱
  * @returns {Promise<Array<string>>}
  */
 
 async function readAllName() {
-    try {
-        const allName= await usingMedicines.getAllDataNames()
-        const indexOfDash = allName.indexOf('-');
-        if (indexOfDash !== -1) {
-          allName.splice(indexOfDash, 1); // 移除 '-'
-          allName.unshift('-'); // 将 '-' 插入到数组的第一个位置
-        }
-        return allName;
-    } catch (error) {
-        console.error('讀取項目名稱發生錯誤', error);
+  try {
+    const allName = await customerManager.getAllDataNames();
+    const indexOfDash = allName.indexOf('-');
+    if (indexOfDash !== -1) {
+      allName.splice(indexOfDash, 1); // 移除 '-'
+      allName.unshift('-'); // 将 '-' 插入到数组的第一个位置
     }
+    return allName;
+  } catch (error) {
+    console.error('讀取項目名稱發生錯誤', error);
+  }
 }
 
 /**
@@ -48,7 +46,7 @@ async function readAllName() {
 async function readDataByName(name) {
     try {
 
-        const data = await usingMedicines.getDataByName(name);
+        const data = await customerManager.getDataByName(name);
         return data
     } catch (error) {
         console.error('讀取指定名稱項目發生錯誤', error);
@@ -62,7 +60,7 @@ async function readDataByName(name) {
  */
 async function updateDataByName(name, upData) {
     try {
-        await usingMedicines.updateDataByName(name, upData)
+        const newData = await customerManager.updateDataByName(name, upData)
     } catch (error) {
         console.error('更新指定名稱項目發生錯誤', error);
     }
@@ -75,14 +73,12 @@ async function updateDataByName(name, upData) {
  */
 async function removeDataByName(name) { 
     try {
-        await usingMedicines.removeDataByName(name);
-        
+        const upData = await customerManager.removeDataByName(name);
+
     } catch (error) {
         console.error('移除指定名稱項目發生錯誤', error);
     }
 }
-
-
 
 
 
@@ -93,5 +89,4 @@ module.exports = {
     readDataByName,
     updateDataByName,
     removeDataByName,
-    
 }

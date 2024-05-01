@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.keys(details).forEach((key, index) => {
             if (key.startsWith('content')) { // 确保只处理内容相关的属性
                 Object.entries(details[key]).forEach(([field, value]) => {
+                    console.log(field);
+                    console.log(value);
                     const input = document.querySelector(`input[name='${field}']`);
                     if (input) {
                         input.value = value;
@@ -99,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const createButton = document.getElementById('addButton');
   
     createButton.addEventListener('click', () => { 
+        event.preventDefault(); // 防止表單默認提交行為
+        
         const selectedName = document.getElementById('newCombination').value;
         if (!selectedName || selectedName=='-') {
           alert('新增項目名稱不得為空');
@@ -136,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         };
         ipcRenderer.send('createCombination', { details });
-        event.preventDefault();
+     
       });
       
       ipcRenderer.on('createCombination', (event, message) => {
@@ -146,10 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
           event.preventDefault();
         }else{
             alert('新增成功！');
-            event.preventDefault();
+            window.location.reload(); // 新增成功後刷新頁面
         }
       });
       
   
     ipcRenderer.send('load-names');
+
+
+    
   });

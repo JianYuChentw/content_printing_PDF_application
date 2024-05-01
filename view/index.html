@@ -11,40 +11,52 @@
   <div class="container">  
     <form id="contact" action="" method="post">
       <div id="formContainer">
-
+        <div class="arear1Button">
+          <a>常用客戶名稱:</a>
+          <select id="clienNamesDropdown">
+            <!-- 這裡會動態加載選項 -->
+          </select>
+          <button id="saveClientButton">存檔</button>
+          <button id="removeClienButton">刪除</button>
+          <div id="newClienArea">
+            <label for="newClien">客戶名稱:</label>
+            <input id="newClien" type="text"  autofocus>
+            <button id="addClienButton">新增</button>
+          </div>
+        </div>
         
         <div id="arear1" class="bigArear">
         <div class="container1">
           <div class="form-row">
             <label for="nameInput">客戶名稱:</label>
-            <input id="nameInput" type="text"  autofocus>
+            <input name='nameInput' id="nameInput" type="text"  autofocus>
           </div>
           <div class="form-row">
             <label for="billNameInput">發票抬頭：</label>
-            <input id="billNameInput" type="text"  autofocus>
+            <input name='billNameInput' id="billNameInput" type="text"  autofocus>
           </div>
           <div class="form-row">
             <label for="billNumberInput">統一編號:</label>
-            <input id="billNumberInput" type="text" autofocus>
+            <input name='billNumberInput' id="billNumberInput" type="text" autofocus>
           </div>
           <div class="form-row">
             <label for="contactPhoneInput">電話:</label>
-            <input id="contactPhoneInput" type="text" >
+            <input name='contactPhoneInput' id="contactPhoneInput" type="text" >
           </div>
           <div class="form-row">
             <label for="contactInput">聯絡人：</label>
-            <input id="contactInput" type="text" >
+            <input name='contactInput' id="contactInput" type="text" >
           </div>
         </div>
 
         <div class="container2">
           <div class="form-row">
             <label for="onSiteContactInput">施作窗口:</label>
-            <input id="onSiteContactInput" type="text"  autofocus>
+            <input name='onSiteContactInput' id="onSiteContactInput" type="text"  autofocus>
           </div>
            <div class="form-row">
             <label for="onSiteContactPhoneInput">施作窗口電話:</label>
-            <input id="onSiteContactPhoneInput" type="text" >
+            <input name='onSiteContactPhoneInput' id="onSiteContactPhoneInput" type="text" >
           </div>
           <div id="DateInputRow" class="form-row">
             <label for="constructionDateInput">施工日期/時間：</label>
@@ -53,7 +65,7 @@
           
         <div class="form-row">
           <label for="constructionAddressInput">施作地點:</label>
-          <textarea id="constructionAddressInput" rows="4" cols="20" autofocus></textarea>
+          <textarea name='constructionAddressInput' id="constructionAddressInput" rows="4" cols="20" autofocus></textarea>
         </div>
         
         </div>
@@ -208,5 +220,6 @@
   <script src="formSubmit.js"></script>
   <script src="eventForm.js"></script>
   <script src="eventData.js"></script>
+  <script src="eventClientData.js"></script>
   </body>
 </html>
