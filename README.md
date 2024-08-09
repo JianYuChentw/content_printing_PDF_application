@@ -13,21 +13,31 @@
 ### **轉印輸出 PDF 檔案**
 - 將已記錄的內容轉印並輸出為 PDF 格式，支援自定義三聯單規格。
 
+## **專案技術**
+
+### **前端**
+- **HTML/CSS/JavaScript**: 使用標準的網頁技術構建用戶界面。
+- **Electron**: 提供跨平台桌面應用程式的框架。
+
+### **後端**
+- **Node.js**: 作為伺服器環境，用於執行 JavaScript 後端邏輯。
+- **PDFKit**: 用於生成 PDF 文件，支持高度自定義。
+
+### **工具與建構**
+- **Electron Builder**: 用於應用程式的打包與發佈。
+- **NPM**: 管理專案中的相依性和腳本。
+
 ## **安裝與運行**
 
 ### **前置需求**
 - 需先安裝 [Node.js](https://nodejs.org/) 與 [npm](https://www.npmjs.com/)
 
 ### **安裝**
-1. Clone 此專案至本地端
-    ```bash
-    git clone https://github.com/你的帳號/printing_pdf_app.git
-    ```
-2. 進入專案目錄
+1. 進入專案目錄
     ```bash
     cd printing_pdf_app
     ```
-3. 安裝所需的套件
+2. 安裝所需的套件
     ```bash
     npm install
     ```
