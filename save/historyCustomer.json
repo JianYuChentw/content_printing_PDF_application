@@ -1,50 +1,26 @@
- [
-    {
-        "dataName": "-",
-        "nameInput": "",
-        "billNameInput": "",
-        "billNumberInput": "",
-        "contactPhoneInput": "",
-        "contactInput": "",
-        "onSiteContactInput": "",
-        "onSiteContactPhoneInput": "",
-        "constructionAddressInput": "",
-        "userStatus": false
-    },
-    {
-        "dataName": "客戶姓名2",
-        "nameInput": "客戶姓名2",
-        "billNameInput": "發票抬頭2",
-        "billNumberInput": "統一編號2",
-        "contactPhoneInput": "電話2",
-        "contactInput": "聯絡人2",
-        "onSiteContactInput": "施作窗口2",
-        "onSiteContactPhoneInput": "施作窗口電話2",
-        "constructionAddressInput": "施作地點2",
-        "userStatus": true
-    },
-    {
-        "dataName": "客戶姓名3",
-        "nameInput": "客戶姓名3",
-        "billNameInput": "發票抬頭3",
-        "billNumberInput": "統一編號3",
-        "contactPhoneInput": "電話3",
-        "contactInput": "聯絡人3",
-        "onSiteContactInput": "施作窗口3",
-        "onSiteContactPhoneInput": "施作窗口電話3",
-        "constructionAddressInput": "施作地點3",
-        "userStatus": true
-    },
-    {
-        "dataName": "客戶姓名4",
-        "nameInput": "客戶姓名4",
-        "billNameInput": "發票抬頭4",
-        "billNumberInput": "統一編號4",
-        "contactPhoneInput": "電話4",
-        "contactInput": "聯絡人4",
-        "onSiteContactInput": "施作窗口4",
-        "onSiteContactPhoneInput": "施作窗口電話4",
-        "constructionAddressInput": "施作地點4",
-        "userStatus": true
-    }
+[
+  {
+    "dataName": "-",
+    "nameInput": "",
+    "billNameInput": "",
+    "billNumberInput": "",
+    "contactPhoneInput": "",
+    "contactInput": "",
+    "onSiteContactInput": "",
+    "onSiteContactPhoneInput": "",
+    "constructionAddressInput": "",
+    "userStatus": false
+  },
+  {
+    "dataName": "客人1",
+    "nameInput": "客人1",
+    "billNameInput": "1231231",
+    "billNumberInput": "3123123",
+    "contactPhoneInput": "123123",
+    "contactInput": "123123",
+    "onSiteContactInput": "123123123",
+    "onSiteContactPhoneInput": "123123123",
+    "constructionAddressInput": "123123",
+    "userStatus": true
+  }
 ]

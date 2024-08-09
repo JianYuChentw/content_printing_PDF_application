@@ -14,8 +14,7 @@ class UsingMedicines {
         this.data.push(newData); // 若 dataName 不重複，則新增資料
         return {nowData:this.data,status:true};
     }
-}
-
+  }
 
   removeDataByName(name) {
     const index = this.data.findIndex(item => item.dataName === name);

@@ -15,12 +15,42 @@ h1{
   margin-bottom: 30px;
 }
 
+#customersBtnArea {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly
+  ;
+}
+#newCustomersArea {
+  margin-top: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+#historicalCustomers {
+  width: 200px;
+  margin-left: 0px;
+}
+
 .arear1Button{
 display: flex;
 flex-direction: row;
 justify-content: space-around;
 width: 200px;
 margin: 0 10px 30px 10px;
+}
+
+#arear0{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;  
+
+
 }
 
 #arear1 {

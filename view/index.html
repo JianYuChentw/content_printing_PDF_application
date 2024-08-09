@@ -12,8 +12,21 @@
     <form id="contact" action="" method="post">
       <div id="formContainer">
 
+          <div id="customersBtnArea" class="arear4Button">
+            <a style="width: 100px; margin-right: 0px;">歷史客戶:</a><select  id="historicalCustomers">
+              <!-- 這裡會動態加載選項 -->
+            </select>
+            <button id="saveCustomersButton">存檔</button>
+            <button id="removeCustomersButton">刪除</button>
+            <div id="newCustomersArea">
+              <label style=" width:150px; margin-right: 0px; " for="newCustomers">客戶名稱:</label>
+              <input style="  margin-right: 0px;" id="newCustomers" type="text"  autofocus>
+              <button style="width:150px; margin: 0px 5px 0px 10px;" id="addCustomersButton">新增客戶</button>
+            </div>
+          </div>
         
         <div id="arear1" class="bigArear">
+
         <div class="container1">
           <div class="form-row">
             <label for="nameInput">客戶名稱:</label>
@@ -57,7 +70,8 @@
         </div>
         
         </div>
-       </div>  
+       </div> 
+
        <div  id="arear2" class="bigArear">
           <div class="container3">
             <label for="onSiteContactInput">施工頻率:</label>
@@ -208,5 +222,6 @@
   <script src="formSubmit.js"></script>
   <script src="eventForm.js"></script>
   <script src="eventData.js"></script>
+  <script src="evenCustomersData.js"></script>
   </body>
 </html>

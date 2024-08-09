@@ -1,12 +1,12 @@
 {
   "name": "printing_pdf_app",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "printing",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "build:win64": "electron-builder --win --x64"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,29 @@
     "directories": {
       "output": "dist"
     },
+    "files": [
+      "main.js",
+      "package.json",
+      "controller/**/*",
+      "pdfFormat/**/*",
+      "service/**/*",
+      "view/**/*",
+      "preload.js",
+      "server.js",
+      "utils.js",
+      {
+        "from": "save",
+        "to": "save",
+        "filter": ["**/*"]
+      }
+    ],
+    "extraFiles": [
+      {
+        "from": "save",
+        "to": "save",
+        "filter": ["**/*"]
+      }
+    ],
     "mac": {
       "icon": "view/icon/work_512.png"
     },
